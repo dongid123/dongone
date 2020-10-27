@@ -48,7 +48,7 @@ $(function () {
                 }
                 //提交成功
                 // alert(res.message)
-                layer.msg(res.message)
+                layer.msg('注册成功,请登录')
                 // 模拟点击登录模板
                 $('#link_login').click();
                 // 清空表单 原生dom方法

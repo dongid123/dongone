@@ -8,4 +8,11 @@ $.ajaxPrefilter(function (params) {
     params.url = baseURL + params.url
     // 拼接之后的服务器地址
     // console.log(params.url);
+    if (params.url.indexOf('/my/') !== -1) {
+        params.headers = {
+            // 重新登录因为token过期时间12小时
+            Authorization: localStorage.getItem('token') || ""
+        }
+    }
+
 })
